@@ -1,45 +1,34 @@
-/* 범용 */
 html { font-size: 20px; }
-body { font-size: 0.8rem;}
+body { font-size: 0.8rem; }
 
-.container { display:flex; gap:1.5rem; width: 60rem; margin: 0 auto; }
-
-/* 개별 */
-header { line-height: 5rem; }
-.gnb { background: #f7f7f7; }
-.gnb>ul { gap: 0; }
-.gnb>ul>li { flex: 1; text-align: center; }
-.gnb>ul>li~li { border-left: 1px solid #ddd; }
-.gnb>ul>li>a { display: block; line-height: 2rem; }
-
-
-.step01 { padding: 5rem 0; background: rgb(253, 253, 138); text-align: center; }
-.step01 h2 { font-size: 1.25rem; margin: 0 0 0.5rem 0; } /* 1.25rem = 25px */
-.step01 p { font-size: 0.75rem; margin: 0 0 1.5rem 0; }
-
+.container { display: flex; justify-content: space-between; padding: 1.5rem; gap: 1.5rem; width: 1200px; margin: 0 auto; }
+h1 { font-size: 1rem; font-weight: 700;}
+.gnb>ul { display: flex; gap: 0.5rem; }
+.gab>ul>li { text-align: center; }
+.gnb>ul>li~li { border-left: 1px solid #ddd; padding: 0 0 0 0.5rem;}  
 .mbtn { display: none; }
 
+.step01 { padding: 5rem 0; text-align: center; background: rgb(198, 228, 254);}
+.step01 h2 { font-size: 1.25rem; margin: 0 0 0.5rem 0;}
+.step01 p { font-size: 0.75rem; margin: 0 0 1.5rem 0;}
 
-/* 반응형 */
-/* @media screen and에서 screen and는 생략가능 */
-@media (max-width:1200px){ 
-.container { width: auto; }
-.step01 { background: rgb(255, 255, 0); }
+
+
+@media (max-width:1200px){
+    .container { width: auto;}
+    .step01 { background: rgb(162, 206, 245); }
 }
 
-@media (max-width:768px){ 
-.container { padding: 0 0.75rem; }
-.step01 { background: #369; }
+@media (max-width:768px) {
+    .container { gap: 0.75rem; }
+    .gnb { display: none; }
+    .gnb>ul { flex-direction: column;}
+    .gnb>ul>li~li { border-left: none; border-top: 1px solid #ddd; padding: 0.5rem 0 0 0;}
+    .mbtn { display: block; } 
+    .step01 { background: rgb(104, 167, 222); }
 }
 
-@media (max-width:560px){ 
-html { font-size: 16px; } 
-.mbtn { position:fixed; inset: 1rem 1rem auto auto; display:block; }
-.gnb { display: none; background: #fff;}
-.gnb>ul>li~li { border-left: none; border-top: 1px solid #ddd; }  
-.container { flex-direction: column; }
-.step01 { background: #369; color: aliceblue; }
-.step01 h2 { font-size: 5vw; margin: 0 0 0.5rem 0; } 
+@media (max-width:560px) {
+    .step01 { background: rgb(41, 133, 213); color: aliceblue; }
+    .step01 h2 { font-size: 5vw; margin: 0 0 0.5rem 0; } 
 }
-
-/* 폰트가 디바이스별로 삐져나갈 때 vw를 쓴다 */
