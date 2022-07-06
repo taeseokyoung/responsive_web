@@ -1,0 +1,61 @@
+.clearfix::after { content: ""; display: block; clear: both; }
+/* .float01 .container::after { content: ""; display: block; clear: both; }
+플롯을 쓸때마다 계속 만들어야하니 귀찮다*/
+
+/* 2. header와 nav */
+.header { line-height: 100px; }
+.header .container { width: 1200px; margin: 0 auto;}
+.header h1 { float: left; padding: 0 15px; }
+/* .header .gnb { float: right; padding: 0 15px; } */
+.header .gnb { float: right; }
+.header .gnb>ul>li { float: left; }
+.header .gnb>ul>li>a { display: block; padding: 0 15px; }
+
+.mopen { display: none; } 
+
+
+
+/* 1. main */
+.float01 { padding: 100px 0; text-align: center; background: rgb(204, 255, 187);}
+
+.float01 h2 { font-size: 21px; font-weight: 700; margin: 0 0 10px 0;}
+.float01 p { font-size: 15px; font-weight: 300; margin: 0 0 30px 0;}
+
+.float01 .container { width: 1200px; margin: 0 auto;}
+.float01 .container figure { float: left; width: 33.333333%; padding: 0 15px; }
+
+/* 3. 반응형 만들어보기 */
+
+@media (max-width: 768px) {
+.header { line-height: 100px; }
+.header .container { width: auto; margin: 0 auto;}
+.header h1 { float: left; padding: 0 15px; }
+.header .gnb { float: none; position: fixed; top: 0; left: -100%; width: calc(100% - 90px); height: 100vh; background: #fff; border-right: 1px solid #333; padding: 50px 15px 0 15px; transition: left 0.5s; }
+.header .gnb.on { left: 0; }
+/* 버튼 누르면 메뉴 왼쪽에서 슝 left값을 조정하고 transition을 줬다. */
+/* width: calc(100% - 90px); 사이에 빼기 넣을 때 공백 안주면 값이 다르다 */
+
+.header .gnb>ul>li { float: none; border-bottom: 1px solid #ddd; ;}
+.header .gnb>ul>li>a { display: block; padding: 0 15px; line-height: 40px;}
+
+.float01 { padding: 100px 0; text-align: center; background: rgb(204, 255, 187);}
+
+.float01 h2 { font-size: 21px; font-weight: 700; margin: 0 0 10px 0;}
+.float01 p { font-size: 15px; font-weight: 300; margin: 0 0 30px 0;}
+
+.float01 .container { width: auto; margin: 0 auto;}
+.float01 .container figure { float: left; width: 100%; padding: 15px 15px; }
+
+.mopen { display: block; position: fixed; top: 30px; right: 10px; line-height: 1;} 
+
+}
+
+
+/* contaier auto
+figure width 100%
+padding 15px 15px
+.header .gnb { float: none; position: fixed; top: 0; left: 0; width: calc(100%-90px); height: 100vh; background: #fff;}
+.header .gnb>ul>li { float: none; }
+.header .gnb>ul>li>a { display: block; padding: 0 15px; line-height: 40px;}
+.header .gnb>ul>li { float: none; border-bottom: 1px solid #ddd;}
+ */

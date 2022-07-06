@@ -1,0 +1,38 @@
+.header { padding: 0 80px; line-height: 100px; height: 100px; border-bottom: 1px solid #ddd; }
+
+/* .header { position: relative; line-height: 100px; height: 100px; border-bottom: 1px solid #ddd; } */
+/* .header .container { position: absolute; top: 0; left: 80px; right: 80px; background: #ddd; } */
+.header .container { background: #ddd; }
+.header h1 { float: left; width: 20%; background: #ff0; }
+.header nav { float: left; width: 60%; background: #369; }
+.header .sns { float: right; background: #f0f; }
+
+/* inline block 중간에 픽셀이 생기기 때문에 font-size 0과 
+20px을 줘서 뜨는것을 삭제했다 근데 아래에 미세한 공간이 생겼다 */
+.header nav>ul { text-align: center; font-size: 0; }
+.header nav>ul>li { display: inline-block; font-size: 15px; vertical-align: middle;}
+.header nav>ul>li>a { display: block; padding: 0 15px; }
+/* .header .sns ul>li { float: left;} */
+
+.header .sns>ul { text-align: center; font-size: 0; }
+.header .sns>ul>li { display: inline-block; font-size: 15px; vertical-align: middle;}
+.header .sns>ul>li i { float: left; padding: 0 5px; }
+
+/* 반응형을 만들면서 그림이 먼저 나오게 하고싶을 때 */
+
+.step03 { padding: 100px 0; background: #f1f1f1; }
+.step03 .container { width: 1200px; margin: 0 auto; }
+.step03 .container::after { content: ""; display: block; clear: both; }
+.step03 .des { float: left; width: 50%; padding: 0 15px; }
+.step03 figure { float: right; width: 50%; padding: 0 15px; }
+
+@media (max-width:768px){
+    .header { display: none; }
+
+    .step03 { padding: 100px 0; background: #f1f1f1; }
+    .step03 .container { width: auto; margin: 0 auto; }
+    .step03 .container::after { content: ""; display: block; clear: both; }
+    .step03 .des { float: left / none; width: 100%; padding: 0 15px; }
+    .step03 figure { float: left / none; width: 100%; padding: 0 15px; }
+
+}
