@@ -24,13 +24,17 @@ step04. responsive web 04 - 다단메뉴 반응형
  - 이 메뉴의 크기를 width: calc(100% - 90px); 이렇게 줬다.  
 - align-items와 justify-content를 적절히 사용했다.  
 
-
-
 step05. responsive web 05 - 다단메뉴 반응형 2
 slick 슬라이드 위에 header를 올리고 다단메뉴 반응형까지 실습.
 - 화살표함수
-<!-- $('.mbtn').on('click', () => ($('.gnb').toggleClass('on'), console.log('check'))) -->
+- $('.mbtn').on('click', () => ($('.gnb').toggleClass('on'), console.log('check')))
 - flex-wrap + flex-direction = flex-flow
 - flex wrap 플랙스는 쪼그라들어있는데 안에내용때문에 늘어날 때 랩을 넘어가지 않도록 해준다
 
+step06. responsive web 06 - 다단메뉴 반응형 3
+- 로고 중앙에 크게 차지하고, 아래에 nav 메뉴가 있는 홈페이지에 쓰면 좋을 background가 있는 다단메뉴 만들기
+- 반응형
+- 가지고있는 자료를 클론해서 사이트맵 만들어보기
+- 사이트맵 닫기 버튼도 클론?
+- 제이쿼리
 
